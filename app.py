@@ -13,42 +13,29 @@ st.write(
     "Upload PDF documents and ask questions "
     "based on their content."
 )
-
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 .stApp {
-    background-color: #F4F6F9;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #E3F2FD;
+    font-family: Montserrat;
 }
  
 h1 {
-    color: #1E3A8A;
-    font-family: 'Montserrat', sans-serif;
+    color: #0D47A1;
+    font-family: Montserrat;
     text-align: center;
-    font-weight: 700;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
-
 .stButton > button {
-    background-color: #2563EB;
+    background-color: #4CAF50;
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 8px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
     border: none;
-    height: 45px;
+    height: 50px;
     width: 100%;
-    transition: all 0.2s ease-in-out;
-}
-
-.stButton > button:hover {
-    background-color: #1D4ED8;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 </style>
 """, unsafe_allow_html=True)
@@ -109,7 +96,8 @@ if process_button:
                               ) 
                    st.info( f"Created {len(all_chunks)} "
                             f"document chunks."
-                              )      
+                              )
+                         
 if clear_button:
 
     st.session_state.messages = []
